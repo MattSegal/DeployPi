@@ -1,5 +1,5 @@
 # Aliases
-
+alias cls='clear'
 
 
 # Stuff that was like that when I got here
