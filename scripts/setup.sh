@@ -17,10 +17,9 @@ ln -s $AEST $LOCALTIME
 
 # Setup ssh for easy putty access
 PI_PUBLIC_KEY=../pi_key.pub
-SSH_DIR = /.ssh
+SSH_DIR=/.ssh
 
 sudo mkdir $SSH_DIR
-sudo mk $SSH_DIR/authorized_keys
 sudo cat $PI_PUBLIC_KEY >> $SSH_DIR/authorized_keys
 
 cat $SSH_DIR/authorized_keys
