@@ -1,8 +1,4 @@
-# Aliases
-alias cls='clear'
-
-
-# Stuff that was like that when I got here
+# ===== It was like that when I got here. ===== 
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -36,3 +32,11 @@ if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found/command-no
         fi
     }
 fi
+
+#  ===== Custom Stuff ===== 
+
+# Aliases
+alias cls='clear'
+
+# Shell prompt -  http://bashrcgenerator.com/
+export PS1="\[\033[38;5;14m\]\A\[$(tput sgr0)\]\[\033[38;5;15m\] : \[$(tput sgr0)\]\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] : \[$(tput sgr0)\]\[\033[38;5;84m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] >\[$(tput sgr0)\]"
