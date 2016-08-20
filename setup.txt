@@ -10,30 +10,27 @@ sudo raspi-config
 	# install new versions of packages
 	sudo apt-get upgrade
 
-===== Install Apps =====
+===== Pull Setup =====
 
-# Install remote desktop
-sudo apt-get install xrdp
-
-# Install Samba [1]
-sudo apt-get install samba
-
-# Install kodi
-sudo apt-get install kodi
-
-# Install script line ending conversion tool [2] (might not need it but nice)
-sudo apt-get install dos2unix
-
-===== Pull Config =====
 git clone https://github.com/MattSegal/DeployPi.git /home/pi/setup
 
-===== Run Config =====
+===== Run Setup =====
+
 cd /home/pi/setup/scripts
-sudo bash ./setup.sh
+
+# Install apps
+	* rdp
+	* samba
+	* kodi
+	* dos2unix [2]
+sudo bash -x ./install.sh
+
+# Configure things
+	* .bashrc
+sudo bash -x ./setup.sh
 
 
 ===== Other Linux Config =====
-# Setup bashrc /etc/bash.bashrc
 # Setup SSH
 # Setup Samba
 	# Workgroup should be WORKGROUP by default
