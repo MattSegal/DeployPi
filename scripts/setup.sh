@@ -4,5 +4,5 @@
 sudo cp ../.bashrc /etc/bash.bashrc
 sudo cp ../.bashrc /home/pi/.bashrc
 sudo cp ../.bashrc ~/.bashrc
-# reload .bashrc
-source ~/.bashrc
+
+bash
