@@ -1,0 +1,17 @@
+# Config
+sudo raspi-config
+
+# update then upgrade packages
+# download list of available packages, no installation
+sudo apt-get update
+# install new versions of packages
+
+# Install remote desktop
+sudo apt-get install xrdp
+
+# Install kodi
+sudo apt-get install kodi
+
+
+
+# update / upgrade ?
