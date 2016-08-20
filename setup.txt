@@ -21,8 +21,16 @@ sudo apt-get install samba
 # Install kodi
 sudo apt-get install kodi
 
+# Install script line ending conversion tool [2] (might not need it but nice)
+sudo apt-get install dos2unix
+
 ===== Pull Config =====
 git clone https://github.com/MattSegal/DeployPi.git /home/pi/setup
+
+===== Run Config =====
+cd /home/pi/setup/scripts
+sudo bash ./setup.sh
+
 
 ===== Other Linux Config =====
 # Setup bashrc /etc/bash.bashrc
@@ -33,3 +41,4 @@ git clone https://github.com/MattSegal/DeployPi.git /home/pi/setup
 
 ===== Notes and Links =====
 [1] http://askubuntu.com/questions/236746/how-to-turn-on-network-discovery-and-share-between-computers-with-samba
+[2] might not need it but nice to have

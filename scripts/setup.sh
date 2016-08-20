@@ -1,7 +1,7 @@
 #! /bin/bash
 
-# write .bashrc
-mv ../.bashrc /etc/bash.bashrc
+# copy .bashrc
+sudo cp ../.bashrc /etc/bash.bashrc
 
 
 
