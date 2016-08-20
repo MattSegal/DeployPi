@@ -15,17 +15,21 @@ sudo raspi-config
 # Install remote desktop
 sudo apt-get install xrdp
 
-# Install Samba
+# Install Samba [1]
 sudo apt-get install samba
 
 # Install kodi
 sudo apt-get install kodi
 
 ===== Pull Config =====
-
-
+git clone https://github.com/MattSegal/DeployPi.git /home/pi/setup
 
 ===== Other Linux Config =====
 # Setup bashrc /etc/bash.bashrc
 # Setup SSH
 # Setup Samba
+	# Workgroup should be WORKGROUP by default
+	sudo nano /etc/samba/smb.conf
+
+===== Notes and Links =====
+[1] http://askubuntu.com/questions/236746/how-to-turn-on-network-discovery-and-share-between-computers-with-samba
