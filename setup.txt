@@ -27,11 +27,15 @@ sudo bash -x ./install.sh
 
 # Configure things
 	* .bashrc
+	* timezone
+	* ssh
 sudo bash -x ./setup.sh
 
 
 ===== Other Linux Config =====
 # Setup SSH
+	
+
 # Setup Samba
 	# Workgroup should be WORKGROUP by default
 	sudo nano /etc/samba/smb.conf
