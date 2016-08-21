@@ -7,7 +7,6 @@ sudo cp $BASHRC /home/pi/.bashrc
 sudo cp $BASHRC ~/.bashrc
 
 # set timezone to AEST
-
 LOCALTIME=/etc/localtime
 AEST=/usr/share/zoneinfo/Australia/Victoria
 
@@ -24,9 +23,6 @@ sudo cat $PI_PUBLIC_KEY >> $SSH_DIR/authorized_keys
 
 # configure authorized keys in config
 SSH_CONFIG='/etc/ssh/sshd_config'
-SSH_FIND='#AuthorizedKeysFile     '
-SSH_REPLACE='AuthorizedKeysFile     /.ssh/authorized_keys'
-
 sudo python find_and_replace.py $SSH_CONFIG '#AuthorizedKeysFile' 'AuthorizedKeysFile'
 sudo python find_and_replace.py $SSH_CONFIG '%h/.ssh/authorized_keys' '/.ssh/authorized_keys'
 
