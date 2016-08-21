@@ -2,6 +2,9 @@
 
 # Raspi config
 sudo raspi-config
+	* change password
+	* expand filesystem
+	* set to boot to command line
 
 # Update then upgrade packages
 	# download list of available packages, no installation
@@ -30,7 +33,7 @@ sudo bash -x ./install.sh
 	* timezone
 	* ssh
 sudo bash -x ./setup.sh
-
+bash
 
 ===== Other Linux Config =====
 # Setup SSH

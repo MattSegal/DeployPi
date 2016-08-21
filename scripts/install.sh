@@ -1,11 +1,11 @@
 # Install remote desktop
-sudo apt-get install xrdp
+sudo apt-get --yes install xrdp
 
 # Install Samba [1]
-sudo apt-get install samba
+sudo apt-get --yes install samba
 
 # Install kodi
-sudo apt-get install kodi
+sudo apt-get --yes install kodi
 
 # Install script line ending conversion tool
-sudo apt-get install dos2unix
+sudo apt-get --yes install dos2unix
