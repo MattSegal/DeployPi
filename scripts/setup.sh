@@ -23,9 +23,9 @@ sudo mkdir $SSH_DIR
 sudo cat $PI_PUBLIC_KEY >> $SSH_DIR/authorized_keys
 
 # configure authorized keys in config
-SSH_CONFIG = '/etc/ssh/sshd_config'
-SSH_FIND = '#AuthorizedKeysFile     %h/.ssh/authorized_keys'
-SSH_REPLACE = 'AuthorizedKeysFile     /.ssh/authorized_keys'
+SSH_CONFIG='/etc/ssh/sshd_config'
+SSH_FIND='#AuthorizedKeysFile     %h/.ssh/authorized_keys'
+SSH_REPLACE='AuthorizedKeysFile     /.ssh/authorized_keys'
 
 sudo python find_and_replace.py $SSH_CONFIG $SSH_FIND $SSH_REPLACE
 
