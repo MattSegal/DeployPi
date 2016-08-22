@@ -1,3 +1,6 @@
+sudo apt-get update
+sudo apt-get upgrade
+
 # Install remote desktop
 sudo apt-get --yes install xrdp
 

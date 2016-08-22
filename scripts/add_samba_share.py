@@ -1,7 +1,7 @@
 import sys
 
 share_data = {
-    "folder_name" : sys.argv[1]
+    "folder_name" : sys.argv[1],
     "path" : sys.argv[2]
 }
 
@@ -20,7 +20,7 @@ read only = no
 create mask = 0777
 directory mask = 0777
 locking = yes
-""".format(share_data) + '\n' + end_string + '\n'
+""".format(**share_data) + '\n' + end_string + '\n'
 
 
 SAMBA_CONFIG_FILE = "/etc/samba/smb.conf"
