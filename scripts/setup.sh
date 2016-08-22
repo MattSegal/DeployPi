@@ -3,7 +3,6 @@
 # copy .bashrc - stomp everything
 BASHRC=../.bashrc
 sudo cp $BASHRC /etc/bash.bashrc
-sudo cp $BASHRC /home/pi/.bashrc
 sudo cp $BASHRC ~/.bashrc
 
 # set timezone to AEST
@@ -28,3 +27,11 @@ sudo python find_and_replace.py $SSH_CONFIG '%h/.ssh/authorized_keys' '/.ssh/aut
 
 # restart ssh service
 sudo service ssh restart
+
+
+# setup samba for sharing
+sudo python add_samba_share.py pi_documents ~/Documents 
+
+# restart samba
+sudo service smbd restart
+
