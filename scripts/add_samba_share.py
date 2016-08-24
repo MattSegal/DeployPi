@@ -13,7 +13,6 @@ samba_share_entry = '\n' + start_string + """
 [{folder_name}]
 comment = matt wuz here
 path = {path}
-browesable = yes
 writable = yes
 guest ok = yes
 read only = no

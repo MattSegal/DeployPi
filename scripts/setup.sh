@@ -1,10 +1,12 @@
 #! /bin/bash
 
+# ===== BASH ======
 # copy .bashrc - stomp everything
 BASHRC=../.bashrc
 sudo cp $BASHRC /etc/bash.bashrc
 sudo cp $BASHRC ~/.bashrc
 
+# ===== TIMEZONES ======
 # set timezone to AEST
 LOCALTIME=/etc/localtime
 AEST=/usr/share/zoneinfo/Australia/Victoria
@@ -13,6 +15,7 @@ AEST=/usr/share/zoneinfo/Australia/Victoria
 rm $LOCALTIME
 ln -s $AEST $LOCALTIME
 
+# ===== SSH ======
 # Setup ssh for easy putty access
 PI_PUBLIC_KEY=../pi_key.pub
 SSH_DIR=/.ssh
@@ -29,11 +32,4 @@ sudo python find_and_replace.py $SSH_CONFIG '%h/.ssh/authorized_keys' '/.ssh/aut
 sudo service ssh restart
 
 
-# setup samba for sharing
-sudo python add_samba_share.py pi_documents ~/Documents 
 
-# restart samba
-sudo service smbd restart
-
-# check for samba syntax errors with
-# testparm
