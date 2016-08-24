@@ -11,7 +11,7 @@
 # get all usb devices
 # lsusb
 
-MOUNT_DISK="$1"
+MOUNT_DISK="$1" # try /dev/sda1
 MOUNT_DIR="/media/hdd"
 
 # make a folder
@@ -26,5 +26,6 @@ then
 	# mount hdd
 	sudo mount $MOUNT_DISK $MOUNT_DIR
 fi
+
 
 
