@@ -18,7 +18,7 @@ PI_PUBLIC_KEY=../pi_key.pub
 SSH_DIR=/.ssh
 
 sudo mkdir $SSH_DIR
-sudo cat $PI_PUBLIC_KEY >> $SSH_DIR/authorized_keys
+sudo cat $PI_PUBLIC_KEY > $SSH_DIR/authorized_keys
 
 # configure authorized keys in config
 SSH_CONFIG='/etc/ssh/sshd_config'
