@@ -12,13 +12,6 @@ sudo raspi-config
 	* expand filesystem (?)
 	* set to boot to command line
 
-# Update then upgrade packages
-	# download list of available packages, no installation
-	sudo apt-get update
-
-	# install new versions of packages
-	sudo apt-get upgrade
-
 ===== Pull Setup =====
 
 git clone https://github.com/MattSegal/DeployPi.git /home/pi/setup
@@ -28,10 +21,11 @@ git clone https://github.com/MattSegal/DeployPi.git /home/pi/setup
 cd /home/pi/setup/scripts
 
 # Install apps
+	* apt-get update and upgrade
 	* rdp
 	* samba
 	* kodi
-	* dos2unix [2]
+	* dos2unix
 sudo bash -x ./install.sh
 
 # Configure things
