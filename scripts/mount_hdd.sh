@@ -12,6 +12,13 @@
 # lsusb
 
 MOUNT_DISK="$1" # try /dev/sda1
+
+if [ ${#MOUNT_DISK} -lt 1 ]; then
+    echo "enter a disk name as param - eg /dev/sda1"
+    exit 1
+fi
+
+
 MOUNT_DIR="/media/hdd"
 
 # make a folder
@@ -23,8 +30,8 @@ MOUNT_REFERENCES=$(mount | grep $MOUNT_DISK | wc -l)
 
 if [ "$MOUNT_REFERENCES" -le "0" ]
 then   
-	# mount hdd
-	sudo mount $MOUNT_DISK $MOUNT_DIR
+    # mount hdd
+    sudo mount $MOUNT_DISK $MOUNT_DIR
 fi
 
 sudo python set_mount_on_boot.py $MOUNT_DISK $MOUNT_DIR
