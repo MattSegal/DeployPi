@@ -1,9 +1,15 @@
+===== Format MicroSd =====
+* Use Win32DiskImager as Admin
+* Select the image file you extracted earlier.
+* Select the drive letter of the SD card in the device box.
+* Click Write and wait for the write to complete.
+
 ===== Basic Linux Config ====
 
 # Raspi config
 sudo raspi-config
 	* change password
-	* expand filesystem
+	* expand filesystem (?)
 	* set to boot to command line
 
 # Update then upgrade packages

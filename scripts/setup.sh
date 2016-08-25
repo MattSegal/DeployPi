@@ -3,8 +3,7 @@
 # ===== BASH ======
 # copy .bashrc - stomp everything
 BASHRC=../.bashrc
-sudo cp $BASHRC /etc/bash.bashrc
-sudo cp $BASHRC ~/.bashrc
+sudo cp $BASHRC /home/pi/.bashrc:
 
 # ===== TIMEZONES ======
 # set timezone to AEST

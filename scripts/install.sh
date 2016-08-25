@@ -9,6 +9,7 @@ sudo apt-get --yes install samba
 
 # Install kodi
 sudo apt-get --yes install kodi
+# --reinstall can be a helpful flag too
 
 # Install script line ending conversion tool
 sudo apt-get --yes install dos2unix
