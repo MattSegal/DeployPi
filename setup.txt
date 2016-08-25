@@ -9,7 +9,10 @@
 # Raspi config
 sudo raspi-config
 	* change password
-	* expand filesystem (?)
+	* set GPU memory to 256 MB
+	* set overclock settings to 'modest'
+	* expand filesystem (?) or maybe not
+		* how can I tell?
 	* set to boot to command line
 
 ===== Pull Setup =====
@@ -36,9 +39,20 @@ sudo bash -x ./setup.sh
 bash
 
 ===== Other Linux Config =====
+# Mount hdd
+	# lsblk for current disk drives - probably sda1
+	lsblk
+	DRIVE_TO_MOUNT=/dev/sda1
+	sudo bash -x ./mount_hdd.sh $DRIVE_TO_MOUNT
+
 # Setup Samba
 	# Workgroup should be WORKGROUP by default
-	sudo nano /etc/samba/smb.conf
+	# sudo nano /etc/samba/smb.conf
+	sudo bash -x ./samba.sh
+
+===== Kodi Config =====
+Set settings menu to advanced
+
 
 ===== Notes and Links =====
 [1] http://askubuntu.com/questions/236746/how-to-turn-on-network-discovery-and-share-between-computers-with-samba

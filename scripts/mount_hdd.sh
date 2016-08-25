@@ -27,5 +27,6 @@ then
 	sudo mount $MOUNT_DISK $MOUNT_DIR
 fi
 
+sudo python set_mount_on_boot.py $MOUNT_DISK $MOUNT_DIR
 
 
