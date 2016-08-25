@@ -1,9 +1,11 @@
 #! /bin/bash
 
 # ===== BASH ======
-# copy .bashrc - stomp everything
+# copy .bashrc - stomp everything - I don't know why this works but it does
 BASHRC=../.bashrc
-sudo cp $BASHRC /home/pi/.bashrc:
+sudo cp $BASHRC /etc/bash.bashrc
+sudo cp $BASHRC /home/pi/.bashrc
+sudo cp $BASHRC ~/.bashrc
 
 # ===== TIMEZONES ======
 # set timezone to AEST
